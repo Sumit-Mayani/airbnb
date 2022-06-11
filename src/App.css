@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 100;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header__icon {
+  object-fit: contain;
+  height: 80px;
+  margin-left: 20px;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15vw;
+  margin-right: 80px;
+}
+
+.header__center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-width: fit-content;
+  padding: 10px;
+  height: 40px;
+  border: 1px solid lightgray;
+  border-radius: 30px;
+}
+
+.header__center > input {
+  border: none;
+  width: 450px;
+  padding: 10px;
+  outline-width: 0;
+}
+
+/* banner */
+
+.banner {
+  height: 66vh;
+  position: relative;
+  background: url("https://watermark.lovepik.com/photo/20211123/large/lovepik-malaysia-luxury-resort-hotel-picture_500865069.jpg")
+    center center;
+  /* background-repeat: no-repeat; */
+}
+
+.banner__info {
+  background-color: #313131;
+  color: #fff;
+  padding-top: 42vh;
+  width: 500px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+}
+
+.banner__info > button {
+  background-color: #ff7779;
+  color: #fff;
+  text-transform: inherit;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.banner__info > h5 {
+  margin-top: 10px;
+}
+
+.banner__info > button:hover {
+  background-color: #fff;
+  color: #ff7779;
+}
+
+.banner__searchButton {
+  background-color: #fff !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  color: #ff7779 !important;
+}
+
+.banner__search {
   display: flex;
   flex-direction: column;
+}
+
+.search{
+  position: absolute;
+  top: 35px;
+  left: 25%;
+  width: 100vw;
+}
+
+.search > h2{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  width: 559px;
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 340px;
 }
 
-.App-link {
-  color: #61dafb;
+.search > input{
+  width: 559px;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  height: 30px;
+  top: 380px;
+  border: none;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search > button{
+  position: absolute;
+  left: 0;
+  top: 415px;
+  text-transform: inherit;
+  background-color: #ff7779;
+  color: #fff;
+  width: 559px;
+
+}
+
+.search > button:hover{
+  background-color: #212121;
+  color: #fff;
 }
